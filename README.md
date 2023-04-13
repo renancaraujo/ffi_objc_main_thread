@@ -25,3 +25,8 @@ dart run lib/ffi_objc_main_thread.dart
 If you see the message `Hello from main thread` in the console, it means that the dart code block was executed in the main thread.
 
 To run ina sync way, chaneg the dart code to call `dispatchToMainSync_` instead of `dispatchToMainAsync_`.
+
+### Important files to understand this thing
+
+- The swift code to be called by the FFI is [here](https://github.com/renancaraujo/ffi_objc_main_thread/blob/main/DispatchToMain/DispatchToMain.swift#L6).
+- The dart code that calls these swift functions is [here](https://github.com/renancaraujo/ffi_objc_main_thread/blob/main/lib/ffi_objc_main_thread.dart#L24).
